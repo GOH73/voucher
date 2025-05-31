@@ -26,4 +26,5 @@ python -m flask run --host=0.0.0.0
 获得 APP ID 后在[`app.js`](front-end/app.js)中根据后端运行的 IP 修改 globalData 下的 serverip
 
 * 效果图
+
 ![效果图](前端效果.png)
