@@ -24,3 +24,6 @@ python -m flask run --host=0.0.0.0
 须在获取微信小程序开发者的 APP ID ，获取流程参考博客：https://blog.csdn.net/Captinyoo/article/details/136433186
 
 获得 APP ID 后在[`app.js`](front-end/app.js)中根据后端运行的 IP 修改 globalData 下的 serverip
+
+* 效果图
+![效果图](前端效果.png)
