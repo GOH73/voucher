@@ -1,0 +1,39 @@
+/* pages/voucherInput/voucherInput.wxss */
+
+.form-item {
+  margin: 40rpx;
+}
+
+.picker {
+  width: 100%;
+  padding: 10rpx;
+  margin-top: 10rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+}
+
+.voucher-section {
+  margin-top: 40rpx;
+  padding: 0 40rpx;
+}
+
+.voucher-list {
+  margin-top: 20rpx;
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 20rpx;
+}
+
+.list-header {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+.voucher-item {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+  border-radius: 8rpx;
+  margin-bottom: 10rpx;
+}

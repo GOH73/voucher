@@ -1,0 +1,35 @@
+<!--pages/insertVoucher/insertVoucher.wxml-->
+<view class="user-info" style="position: relative; left: -10rpx; top: 0rpx; width: 761rpx; height: 294rpx; box-sizing: border-box; display: flex">
+  <text style="position: relative; left: 254rpx; top: -88rpx; font-weight: bold; color: white;">添加凭证</text>
+</view>
+
+<view class="transparent-container" style="position: relative; left: 39rpx; top: -169rpx; width: 672rpx; display: block; box-sizing: border-box">
+  <view class="info-card">
+    <text class="label">当前流转包</text>
+    <view class="basket-info" wx:if="{{basketCode}}">
+      <text>{{basketCode}}</text>
+    </view>
+    <view class="empty-info" wx:else>
+      <text>请先扫描流转包</text>
+    </view>
+    <button class="scan-btn" type="primary" bindtap="scanBasket">扫描流转包</button>
+  </view>
+
+  <view class="info-card">
+    <text class="label">待添加凭证</text>
+    <view class="voucher-list" wx:if="{{vouchers.length > 0}}">
+      <view wx:for="{{vouchers}}" wx:key="index" class="voucher-item">
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class="empty-info" wx:else>
+      <text>暂无扫描凭证</text>
+    </view>
+    <button class="scan-btn" type="primary" bindtap="scanVoucher" disabled="{{!basketCode}}">扫描凭证</button>
+  </view>
+
+  <button class="submit-btn" type="primary" bindtap="submitInsert" 
+          disabled="{{!basketCode || vouchers.length === 0}}">
+    确认添加
+  </button>
+</view>

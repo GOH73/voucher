@@ -1,0 +1,65 @@
+/* pages/beginHandover/beginHandover.wxss */
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background-color: #00A9BA;
+  border-bottom-left-radius: 33px;
+  border-bottom-right-radius: 33px;
+}
+
+.transparent-container {
+  background-color: rgba(223, 210, 210, 0.5);
+  padding: 20rpx;
+  border-radius: 18px;
+}
+
+.info-card {
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  color: #666;
+  font-size: 28rpx;
+  width: 180rpx;
+}
+
+.content {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.scan-btn {
+  margin: 40rpx 0;
+  width: 100% !important;
+}
+
+.voucher-list {
+  margin-top: 30rpx;
+  border-top: 1px solid #eee;
+  padding-top: 20rpx;
+}
+
+.list-header {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+.voucher-item {
+  background-color: #f5f5f5;
+  padding: 20rpx;
+  margin-bottom: 10rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+}

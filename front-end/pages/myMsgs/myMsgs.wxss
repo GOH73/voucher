@@ -1,0 +1,29 @@
+/* pages/myMsgs/myMsgs.wxss */
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background-color: #00A9BA;
+  border-bottom-left-radius: 33px;
+  border-bottom-right-radius: 33px;
+}
+
+.transparent-container {
+  background-color: rgba(223, 210, 210, 0.5); /* 黑色背景，透明度为 0.5 */
+  padding: 20rpx;
+  border-radius: 10rpx;
+  color: white; /* 文字颜色 */
+  border-radius: 18px;
+}
+
+.message-item {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+  color: #000;
+  background-color: white;
+  border-radius: 16rpx;
+}

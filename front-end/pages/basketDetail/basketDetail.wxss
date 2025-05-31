@@ -1,0 +1,60 @@
+/* pages/basketDetail/basketDetail.wxss */
+.head {
+  position: relative; 
+  left: -10rpx; 
+  top: 0rpx; 
+  width: 761rpx; 
+  height: 294rpx; 
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background-color: #00A9BA;
+  border-bottom-left-radius: 33px;
+  border-bottom-right-radius: 33px;
+}
+
+.transparent-container {
+  position: relative; 
+  left: 39rpx; 
+  top: -169rpx; 
+  width: 672rpx;  
+  display: block; 
+  box-sizing: border-box;
+  background-color: rgba(223, 210, 210, 0.5); /* 黑色背景，透明度为 0.5 */
+  padding: 20rpx;
+  border-radius: 10rpx;
+  color: white; /* 文字颜色 */
+  border-radius: 18px;
+}
+
+.txt-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #eee;
+  color: #000;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.process-container {
+  background-color: white;
+  padding: 30rpx;
+  border-radius: 18px;
+  margin: 20rpx;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+  color: #000;
+  background-color: white;
+  border-radius: 16rpx;
+}

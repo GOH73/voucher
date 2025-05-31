@@ -1,0 +1,96 @@
+/* pages/my/my.wxss */
+
+/* index.wxss */
+.container {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* 用户信息区域 */
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background-color: #00A9BA;
+  border-bottom-left-radius: 33px;
+  border-bottom-right-radius: 33px;
+}
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 25%;
+}
+.nickname {
+  /* margin-left: 30rpx; */
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+/* 功能按钮区域 */
+.func-buttons {
+  display: flex;
+  justify-content: space-around;
+  background-color: #FF9900;
+  padding: 30rpx 0;
+  border-radius: 17px;
+}
+.btn {
+  color: white;
+  font-size: 30rpx;
+  background-color: transparent;
+  margin: 0;
+  padding: 0 40rpx;
+  line-height: 1.5;
+}
+.btn::after {
+  border: none;
+}
+
+/* 主功能列表 */
+.main-list {
+  background-color: white;
+  margin: 30rpx;
+  border-radius: 16rpx;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+}
+.list-item:last-child {
+  border-bottom: none;
+}
+.list-icon {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 30rpx;
+  position: absolute; 
+  left: 30rpx; 
+  top: 29rpx
+}
+
+.list-text {
+  position: absolute; 
+  left: 78rpx; 
+  top: 29rpx
+}
+
+.badge {
+  position: relative; 
+  right: 0rpx; 
+  left: 558rpx; 
+  top: 1rpx; 
+  font-style: bold;
+  background-color: red;
+  color: white;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 24rpx;
+}

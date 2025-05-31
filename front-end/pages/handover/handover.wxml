@@ -1,0 +1,57 @@
+<!--pages/handover/handover.wxml-->
+<view class="user-info" style="position: relative; left: -10rpx; top: 0rpx; width: 761rpx; height: 294rpx; box-sizing: border-box; display: flex">
+  <text style="position: relative; left: 254rpx; top: -88rpx; font-weight: bold; color: white;">流转交接</text>
+</view>
+
+<view class="transparent-container" style="position: relative; left: 39rpx; top: -169rpx; width: 672rpx; display: block; box-sizing: border-box">
+  <view class="basket-info">
+    <view class="detail-row">
+      <text class="label">流转包编号：</text>
+      <text class="content">{{barcode}}</text>
+    </view>
+    
+    <view class="detail-row">
+      <text class="label">当前位置：</text>
+      <text class="content">{{node}}</text>
+    </view>
+
+    <block wx:if="{{cur_user === basket_user}}">
+      <view class="status-card">
+        <view class="status-title">✓ 你是这个流转包的负责人</view>
+        <view class="status-desc">你可以直接修改流转包的节点</view>
+        <button class="primary-btn" bind:tap="dialogSwitch">修改位置</button>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="status-card">
+        <view class="status-title">ℹ 这个流转包由他人负责</view>
+        <view class="status-desc">你可以向负责人发起交接申请来接管</view>
+        <button class="primary-btn" bind:tap="dialogSwitch">申请接管</button>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view wx:if="{{showDialog}}" class="dialog-overlay">
+  <view class="dialog-content">
+    <text class="dialog-title">
+      {{cur_user === basket_user ? '修改流转包位置' : '申请接管流转包'}}
+    </text>
+    
+    <view class="form-item">
+      <text class="picker-label">选择目标位置：</text>
+      <picker mode="selector" range="{{nodes}}" bindchange="bindNewNode">
+        <view class="picker-content">
+          {{new_node >= 0 ? nodes[new_node] : '请选择流转包的位置'}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="dialog-buttons">
+      <button class="cancel-btn" bindtap="dialogSwitch">取消</button>
+      <button class="confirm-btn" bindtap="{{cur_user === basket_user ? 'updateNode' : 'apply'}}">
+        {{cur_user === basket_user ? '确定' : '申请'}}
+      </button>
+    </view>
+  </view>
+</view>

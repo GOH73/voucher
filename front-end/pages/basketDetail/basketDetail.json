@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ct-step": "/components/step/step"
+  }
+}

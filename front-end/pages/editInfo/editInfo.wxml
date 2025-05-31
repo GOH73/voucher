@@ -1,0 +1,28 @@
+<!--pages/editInfo/editInfo.wxml-->
+<view class="user-info" style="position: relative; left: -10rpx; top: 0rpx; width: 761rpx; height: 294rpx; box-sizing: border-box; display: flex">
+  <text style="position: relative; left: 254rpx; top: -88rpx; font-weight: bold; color: white;">修改信息</text>
+</view>
+
+<view class="transparent-container" style="position: relative; left: 39rpx; top: -169rpx; width: 672rpx; display: block; box-sizing: border-box">
+  <view class="form-item">
+    <text class="label">昵称</text>
+    <input class="input" value="{{nickname}}" bindinput="onNicknameChange" placeholder="请输入新昵称"/>
+  </view>
+
+  <view class="form-item">
+    <text class="label">手机号</text>
+    <input class="input" value="{{phone}}" bindinput="onPhoneChange" type="number" placeholder="请输入新手机号"/>
+  </view>
+
+  <view class="form-item">
+    <text class="label">原密码</text>
+    <input class="input" password bindinput="onOldPwdChange" placeholder="请输入原密码"/>
+  </view>
+
+  <view class="form-item">
+    <text class="label">新密码</text>
+    <input class="input" password bindinput="onNewPwdChange" placeholder="请输入新密码"/>
+  </view>
+
+  <button class="save-btn" type="primary" bindtap="saveChanges">保存修改</button>
+</view>

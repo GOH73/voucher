@@ -1,0 +1,38 @@
+/* components/step.wxss */
+.ct-wx-step{
+  /* 
+  width: 96%;
+  margin-left: 2%;
+  box-shadow: 0px 2px 10px rgba(102, 102, 102, 0.09);
+  border-radius: 6px; */
+  background: #FFFFFF;
+  padding: 12px 0px;
+}
+.ct-wx-cell-list{
+  padding: 0 12px;
+}
+.ct-wx-cell-line{
+  padding-left: 12px;
+  color: #666666;
+  font-size: 12px;
+  margin-left: 5px;
+  border-left: 1px solid #E4E4E4;
+  height: auto; 
+}
+.last{
+  color: #333333;
+  border-left: 1px solid #FFB93F;
+}
+.default{
+  background: #E4E4E4;
+}
+.piont-last{
+  background: #FFB93F;
+}
+.ct-wx-cell-point{
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 1;
+}

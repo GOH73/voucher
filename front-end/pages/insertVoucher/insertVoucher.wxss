@@ -1,0 +1,71 @@
+/* pages/insertVoucher/insertVoucher.wxss */
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background-color: #00A9BA;
+  border-bottom-left-radius: 33px;
+  border-bottom-right-radius: 33px;
+}
+
+.transparent-container {
+  background-color: rgba(223, 210, 210, 0.5);
+  padding: 20rpx;
+  border-radius: 18px;
+}
+
+.info-card {
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.label {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.basket-info {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+
+.empty-info {
+  text-align: center;
+  color: #999;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.voucher-list {
+  margin-bottom: 20rpx;
+}
+
+.voucher-item {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+  border-radius: 8rpx;
+  margin-bottom: 10rpx;
+}
+
+.scan-btn {
+  width: 100% !important;
+  margin-top: 20rpx;
+}
+
+.submit-btn {
+  width: 100% !important;
+  margin-top: 40rpx;
+  background-color: #00A9BA !important;
+}
+
+button[disabled] {
+  background-color: #ccc !important;
+  color: #fff !important;
+}

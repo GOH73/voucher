@@ -1,0 +1,28 @@
+<!--pages/newNode/newNode.wxml-->
+<view class="form-container">
+  <view class="form-item">
+    <text class="label">* 节点名称</text>
+    <input style="display: block; box-sizing: border-box" 
+      class="input" 
+      value="{{name}}"
+      bindinput="bindName"
+      placeholder="请输入内容" 
+      placeholder-class="placeholder"
+    />
+  </view>
+
+  <view class="form-item">
+    <text class="label">节点描述</text>
+    <textarea style="display: block; box-sizing: border-box"
+      class="textarea"
+      value="{{desc}}"
+      bindinput="bindDesc"
+      placeholder="请输入内容"
+      placeholder-class="placeholder"
+    />
+  </view>
+</view>
+
+<view class="space" style="width: 748rpx; height: 150rpx; display: block; box-sizing: border-box; padding-top: 10%;">
+  <button type="primary" bind:tap="submit">提交</button>
+</view>

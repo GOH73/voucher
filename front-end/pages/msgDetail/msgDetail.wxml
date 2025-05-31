@@ -1,0 +1,65 @@
+<!--pages/msgDetail/msgDetail.wxml-->
+<view class="user-info" style="position: relative; left: -10rpx; top: 0rpx; width: 761rpx; height: 294rpx; box-sizing: border-box; display: flex">
+  <text style="position: relative; left: 254rpx; top: -88rpx; font-weight: bold; color: white;">消息详情</text>
+</view>
+
+<view class="transparent-container" style="position: relative; left: 39rpx; top: -169rpx; width: 672rpx; display: block; box-sizing: border-box">
+<block wx:if="{{type === 'application'}}">
+    <view class="message-item">
+      <view class="status-tag" wx:if="{{status==0}}">[待确认]</view>
+      <view class="status-tag" wx:if="{{status==1}}">[已同意]</view>
+      <view class="status-tag" wx:if="{{status==2}}">[已拒绝]</view>
+      <view class="detail-row">
+        <text class="label">申请人：</text>
+        <text class="content">{{applicant_name}}</text>
+      </view>
+      
+      <view class="detail-row">
+        <text class="label">申请时间：</text>
+        <text class="content">{{time}}</text>
+      </view>
+      
+      <view class="detail-row" bind:tap="checkBasket">
+        <text class="label">流转包编号：</text>
+        <text class="content">{{basket_barcode}}</text>
+      </view>
+      
+      <view class="detail-row">
+        <text class="label">目标节点：</text>
+        <text class="content">{{node_to}}</text>
+      </view>
+      
+      <view wx:if="{{status==0}}" class="action-buttons">
+        <button type="primary" bindtap="approve">同意</button>
+        <button type="warn" bindtap="reject">拒绝</button>
+      </view>
+    </view>
+</block>
+
+<block wx:else>
+  <view class="message-item">
+    <view class="status-tag" wx:if="{{status==0}}">[待确认]</view>
+    <view class="status-tag" wx:if="{{status==1}}">[已同意]</view>
+    <view class="status-tag" wx:if="{{status==2}}">[已拒绝]</view>
+
+    <view class="detail-row">
+        <text class="label">申请时间：</text>
+        <text class="content">{{time}}</text>
+    </view>
+    
+    <view class="detail-row" bind:tap="checkBasket">
+      <text class="label">流转包编号：</text>
+      <text class="content">{{basket_barcode}}</text>
+    </view>
+    
+    <view class="detail-row">
+      <text class="label">目标节点：</text>
+      <text class="content">{{node_to}}</text>
+    </view>
+    
+    <button wx:if="{{status === 1}}" type="primary" bind:tap="beginHandover">开始交接</button>
+  </view>
+</block>
+
+</view>
+

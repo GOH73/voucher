@@ -1,0 +1,25 @@
+<!--pages/myMsgs/myMsgs.wxml-->
+<view class="user-info" style="position: relative; left: -10rpx; top: 0rpx; width: 761rpx; height: 294rpx; box-sizing: border-box; display: flex">
+  <text style="position: relative; left: 254rpx; top: -88rpx; font-weight: bold; color: white;">我的消息</text>
+</view>
+
+<view wx:if="{{isLoading}}">
+  <text>正在获取消息列表...</text>
+</view>
+
+<view wx:else class="transparent-container" style="position: relative; left: 39rpx; top: -169rpx; width: 672rpx; display: block; box-sizing: border-box; min-height: 1000rpx">
+  <view style="padding-top: 10px;"></view>
+  <!-- 使用 for 循环显示内容 -->
+  <block wx:for="{{content}}" wx:key="index">
+      <view class="message-item" style="margin-bottom: 10px;" bindtap="msgDetail" data-index="{{index}}">
+          <text wx:if="{{status[index]==0}}" style="color: gray;">[未读]</text>
+          <text>{{content[index]}}</text>
+          <text>时间：{{times[index]}}</text>
+      </view>
+  </block>
+  
+  <!-- 如果 content 数组为空，显示提示信息 -->
+  <view wx:if="{{content.length === 0}}" style="text-align: center; color: #999; font-size: 28rpx; margin-top: 20px;">
+    暂无消息
+  </view>
+</view>

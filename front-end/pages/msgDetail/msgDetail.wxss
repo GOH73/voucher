@@ -1,0 +1,56 @@
+/* pages/msgDetail/msgDetail.wxss */
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background-color: #00A9BA;
+  border-bottom-left-radius: 33px;
+  border-bottom-right-radius: 33px;
+}
+
+.transparent-container {
+  background-color: rgba(223, 210, 210, 0.5);
+  padding: 20rpx;
+  border-radius: 18px;
+  min-height: 400rpx;
+}
+
+.message-item {
+  background-color: white;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.status-tag {
+  color: gray;
+  margin-bottom: 20rpx;
+}
+
+.detail-row {
+  margin-bottom: 20rpx;
+  padding: 10rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.label {
+  color: #666;
+  width: 180rpx;
+  display: inline-block;
+}
+
+.content {
+  color: #333;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40rpx;
+  gap: 20rpx;
+}
+
+.action-buttons button {
+  flex: 1;
+  max-width: 300rpx;
+}

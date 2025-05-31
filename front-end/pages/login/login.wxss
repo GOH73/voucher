@@ -1,0 +1,41 @@
+/* pages/login/login.wxss */
+
+.header {
+  padding: 20px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  margin-top: 5px;
+}
+
+.phone-input, .code-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  flex: 1;
+  position: relative;
+}
+
+.code-input {
+  position: relative; /* 添加相对定位 */
+  display: flex;
+  align-items: center;
+}
+
+.code-input text {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.send-code {
+  right: 10rpx;
+  padding: 3%;
+}

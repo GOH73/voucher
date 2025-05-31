@@ -1,0 +1,25 @@
+<!--pages/voucherInput/voucherInput.wxml-->
+<view style="padding-top: 5%; display: flex; flex-direction: column;">
+  <view class="form-item">
+    <picker mode="selector" range="{{nodes}}" bindchange="bindCurNode">
+      <view class="picker">
+        {{curNode >= 0 ? nodes[curNode] : '请选择当前科室'}}
+      </view>
+    </picker>
+  </view>
+  <text style="text-align: center; margin: 5%;">本次流转包的识别码为：</text>
+  <canvas style="align-self: center;" canvas-id="barcode"/>
+  <view style="text-align: center; margin: 5%;">{{basketCode}}</view>
+  <button type="primary" bind:tap="saveBarcode" style="margin-top: 10%;">保存</button>
+
+  <view class="voucher-section">
+    <button class="scan-btn" bind:tap="scanBarcode" disabled="{{!basketSaved}}">录入凭证</button>
+    
+    <view class="voucher-list" wx:if="{{vouchers.length > 0}}">
+      <view class="list-header">已扫描凭证 ({{vouchers.length}})</view>
+      <view wx:for="{{vouchers}}" wx:key="index" class="voucher-item">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>

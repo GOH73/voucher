@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/function/function",
+    "pages/my/my",
+    "pages/voucherInput/voucherInput",
+    "pages/basketDetail/basketDetail",
+    "pages/newNode/newNode",
+    "pages/handover/handover",
+    "pages/beginHandover/beginHandover",
+    "pages/myMsgs/myMsgs",
+    "pages/msgDetail/msgDetail",
+    "pages/myBaskets/myBaskets",
+    "pages/editInfo/editInfo",
+    "pages/insertVoucher/insertVoucher",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "财务凭证流转",
+    "navigationBarBackgroundColor": "#00A9BA"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#FF9623",
+    "backgroundColor": "#00A9BA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/function/function",
+        "text": "首页",
+        "iconPath": "/img/home.png",
+        "selectedIconPath": "/img/selecthome.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人",
+        "iconPath": "/img/my.png",
+        "selectedIconPath": "/img/selectmy.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

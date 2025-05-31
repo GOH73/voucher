@@ -1,0 +1,57 @@
+<!--pages/basketDetail/basketDetail.wxml-->
+<view class="head">
+  <text 
+    style="position: relative; left: 254rpx; top: -88rpx; font-weight: bold; color: white;"
+  >流转包详情
+  </text>
+</view>
+
+<view class="transparent-container">
+  <view class="txt-item">流转包编号：{{barcode}}</view>
+  <view class="txt-item">当前负责人：{{logs.receiver_name[0]}}</view>
+
+  <view 
+    style="background-color: #FFDDB8; margin-top: 15px; display: flex; width: 632rpx; box-sizing: border-box; flex-direction: column;"
+  >
+    <view 
+      style="background-color: #FFA747; border-radius: 12px; width: 240rpx; height: 70rpx; display: block; box-sizing: border-box; position: relative; left: 188rpx; top: -30rpx; margin-top: 30px"
+    >
+      <text 
+        style="align-items: center; color: black; padding: 10px; position: relative; left: 44rpx; top: 17rpx"
+      >流转日志
+      </text>
+    </view>
+    <!-- 新增流转日志可视化区域 -->
+    <view class="process-container" style="margin-top: 20rpx">
+      <view 
+        style="position: relative; margin-top: 30rpx"
+      >
+        <!-- 使用时间轴组件 -->
+        <ct-step id="step" stepList="{{stepList}}"></ct-step>
+      </view>
+    </view>
+    <view class="process-container">
+      <block wx:for="{{vouchers}}" wx:key="id">
+        <text 
+          style="color: black;"
+          class="task-item"
+        >凭证编号: {{item}}
+        </text>
+      </block>
+    </view>
+    <!-- Dialog for creating a new unit -->
+    <view wx:if="{{showDialog}}" class="dialog-overlay" bindtap="hideDialog">
+      <view class="dialog-content" catchtap="stopPropagation">
+        <text class="dialog-title">
+          确定要将节点
+          更新为 {{next}} 吗
+        </text>
+        <view class="dialog-buttons">
+          <button bindtap="hideDialog">取消</button>
+          <button bindtap="updateNode">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

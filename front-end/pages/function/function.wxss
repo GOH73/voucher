@@ -1,0 +1,141 @@
+/* pages/image/index.wxss */
+.header {
+  padding: 20px;
+  text-align: center;
+}
+
+.tab-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+/* 按钮容器样式 */
+.button-container {
+  padding: 40rpx;
+  display: flex;
+  gap: 30rpx;
+}
+
+.btn {
+  flex: 1;
+  height: 100rpx;
+  border-radius: 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.create-btn {
+  background: #00A9BA;
+  color: #ffffff;
+}
+
+.view-btn {
+  background: #FF9623;
+  color: #ffffff;
+}
+
+/* 点击态效果 */
+.btn:active {
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
+/* pages/payment/pages/invoice/invoice.wxss */
+.invoice-container {
+  padding: 20rpx;
+  background-color: #F5F5F5; /* 浅米色背景 */
+}
+/* 横向滚动容器 */
+.scroll-h {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 20rpx 0;
+}
+
+.payment-section {
+  width: 100%;
+}
+
+.item-icon {
+  width: 40rpx;
+  height: 40rpx;
+  right: 30rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 157rpx;
+  text-align: center;
+  font-size: x-small;
+  padding-top: 10%;
+}
+
+.hold {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* 半透明背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(8rpx); /* 毛玻璃效果 */
+}
+
+.dialog-content {
+  background: linear-gradient(135deg, #fff1f5 0%, #fff9fc 100%); /* 渐变背景 */
+  padding: 40rpx 30rpx;
+  border-radius: 24rpx;
+  width: 85%;
+  max-width: 500rpx;
+  box-shadow: 0 16rpx 32rpx rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  transform: translateY(-20rpx); /* 浮动效果 */
+  transition: all 0.3s ease; /* 动画过渡 */
+  text-align: center;
+}
+
+.dialog-title {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  color: #2c3e50;
+  font-size: 36rpx;
+  margin-bottom: 50rpx;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  padding-bottom: 30rpx;
+}
+
+.dialog-buttons {
+  display: flex;
+  gap: 24rpx;
+  justify-content: flex-end;
+}
+
+.dialog-input {
+  width: 90%;
+  height: 80rpx;
+  margin: 20rpx auto;
+  padding: 0 20rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 8rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+}

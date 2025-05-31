@@ -1,0 +1,18 @@
+<!--pages/myBaskets/myBaskets.wxml-->
+<view class="user-info" style="position: relative; left: -10rpx; top: 0rpx; width: 761rpx; height: 294rpx; box-sizing: border-box; display: flex">
+  <text style="position: relative; left: 254rpx; top: -88rpx; font-weight: bold; color: white;">我的流转包</text>
+</view>
+
+<view class="transparent-container" style="position: relative; left: 39rpx; top: -169rpx; width: 672rpx; display: block; box-sizing: border-box; min-height: 1000rpx">
+  <view style="padding-top: 10px;"></view>
+  <block wx:if="{{baskets.length > 0}}">
+    <view wx:for="{{baskets}}" wx:key="index" class="basket-item" bindtap="basketDetail" data-barcode="{{item}}">
+      <view class="basket-header">
+        <text class="basket-title">流转包编号：{{item}}</text>
+      </view>
+    </view>
+  </block>
+  <view wx:else class="empty-tip">
+    <text>暂无流转包</text>
+  </view>
+</view>

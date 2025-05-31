@@ -1,0 +1,73 @@
+<!--pages/my/my.wxml-->
+
+<!-- index.wxml -->
+<view class="container" style="display: flex; ">
+  <!-- 用户信息区域 -->
+  <view class="user-info" style="position: relative; left: -2rpx; top: -200rpx; width: 761rpx; height: 324rpx; box-sizing: border-box; display: flex">
+    <image style="position: relative; left: 70rpx; top: -57rpx; width: 114rpx; height: 114rpx; display: block; box-sizing: border-box" class="avatar" src="/img/avatar.png" />
+    <view style="width: 244rpx; height: 88rpx; display: block; position: relative; left: 114rpx; top: -57rpx; box-sizing: border-box">
+      <view class="nickname" style="width: 191rpx; display: block; padding-bottom: 10px; box-sizing: border-box">你好！{{userName}}</view>
+      <view class="tel" style="height: 42rpx; display: flex; width: 230rpx; box-sizing: border-box">{{phoneNumber}}</view>
+    </view>
+  </view>
+
+  <!-- 功能按钮区域 -->
+  <!-- <view class="func-buttons" style="position: relative; left: 0rpx; top: -318rpx; width: 628rpx; height: 218rpx; display: flex; box-sizing: border-box">
+    <button 
+    class="btn" 
+    style="display: flex; flex-direction: column; width: 276rpx; box-sizing: border-box; left: 0rpx; top: 0rpx"
+    bind:tap="myTask"
+    >
+      <image 
+      style="width: 62rpx; height: 57rpx; display: block; box-sizing: border-box; position: relative; left: 37rpx; top: 23rpx" 
+      src="/img/task.png" 
+      mode=""
+      bind:tap="myTask"
+      />
+      <text style="height: 57rpx; display: block; box-sizing: border-box; position: relative; left: -15rpx; top: 39rpx; width: 164rpx;color: black;">我的流转包</text>
+    </button>
+    <button 
+    class="btn" 
+    style="display: flex; flex-direction: column; width: 276rpx; box-sizing: border-box; left: 0rpx; top: 0rpx; position: relative"
+    bind:tap="myRole"
+    >
+      <image style="width: 62rpx; height: 57rpx; display: block; box-sizing: border-box; position: relative; left: 37rpx; top: 23rpx" src="/img/role.png" mode=""/>
+      <text style="height: 57rpx; display: block; box-sizing: border-box; position: relative; left: -15rpx; top: 39rpx; width: 164rpx; color: black">我的角色</text>
+    </button>
+    <button class="btn" style="display: flex; flex-direction: column; width: 276rpx; box-sizing: border-box;">
+      <image style="width: 62rpx; height: 57rpx; display: block; box-sizing: border-box; position: relative; left: 37rpx; top: 23rpx" src="/img/manage.png" mode=""/>
+      <text style="height: 57rpx; display: block; box-sizing: border-box; position: relative; left: -15rpx; top: 39rpx; width: 164rpx;color: black">人员管理</text>
+    </button>
+  </view> -->
+
+  <!-- 主功能列表 -->
+  <view class="main-list" style="display: block; box-sizing: border-box; position: relative; left: 0rpx; top: -322rpx">
+    <view class="list-item" style="width: 686rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx; height: 103rpx" bind:tap="myBaskets">
+      <view>
+        <image class="list-icon" src="/img/task.png" />
+      </view>
+      <text style="position: absolute; left: 80rpx; top: 30rpx">我负责的流转包</text>
+      <text style="position: relative; right: 0rpx; left: 558rpx; top: 1rpx; font-style: bold;">>>></text>
+    </view>
+    <view class="list-item" style="width: 686rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx; height: 103rpx" bind:tap="editInfo">
+      <image class="list-icon" src="/img/role.png" />
+      <text class="list-text">修改信息</text>
+      <text style="position: relative; right: 0rpx; left: 558rpx; top: 1rpx; font-style: bold;">>>></text>
+    </view>
+    <view class="list-item" bind:tap="myMsgs">
+      <image class="list-icon" src="/img/notification.png" />
+      <text class="list-text">通知</text>
+      <view wx:if="{{msgsNum <= 0}}">
+        <text style="position: relative; right: 0rpx; left: 558rpx; top: 1rpx; font-style: bold;">>>></text>
+      </view>
+      <view wx:else class="badge">{{msgsNum}}</view>
+    </view>
+
+    <view class="list-item" style="width: 686rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx; height: 103rpx" bind:tap="logout">
+      <image class="list-icon" src="/img/logout.png" />
+      <text class="list-text">退出登录</text>
+      <text style="position: relative; right: 0rpx; left: 558rpx; top: 1rpx; font-style: bold;">>>></text>
+    </view>
+
+  </view>
+</view>

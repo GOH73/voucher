@@ -1,0 +1,63 @@
+<!-- pages/image/index.wxml -->
+<view class="header">
+  <image src='https://s1.chu0.com/src/img/png/6a/6a5e29d57e294198a2a22632bb8547f4.png?e=2051020800&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:uQ04KpfNS9sqK3z_rvVpkS9JW1Q=' mode="aspectFit"></image>
+</view>
+
+<!-- 功能区域 -->
+<view class="button-container">
+  <view 
+    class="btn create-btn" 
+    bindtap="createBasket"
+  >
+    凭证装包
+  </view>
+  <view 
+    class="btn view-btn" 
+    bindtap="handover"
+  >
+    流转交接
+  </view>
+</view>
+
+
+<view class="invoice-container" style="margin: 5%; border-radius: 10rpx;">
+  <view class="payment-section scroll-h" style="display: flex; flex-direction: row;">
+    <view class="hold" bind:tap="recogBasket">
+      <image class="item-icon" src="/img/scan.png"/>
+      <view class="item">查看流转包</view>
+    </view>
+
+    <view class="hold" bind:tap="createNode">
+      <image class="item-icon" src="/img/node.png"/>
+      <view class="item">添加节点</view>
+    </view>
+
+    <view class="hold" bind:tap="dialogSwitch">
+      <image class="item-icon" src="/img/search.png"/>
+      <view class="item">搜索凭证</view>
+    </view>
+    <view wx:if="{{showDialog}}" class="dialog-overlay">
+      <view class="dialog-content">
+        <text class="dialog-title">
+          输入凭证编号以查找
+        </text>
+        <input 
+          class="dialog-input" 
+          type="text"
+          placeholder="请输入凭证编号"
+          model:value="{{voucher}}"
+          maxlength="6"
+        />
+        <view class="dialog-buttons">
+          <button bindtap="searchVoucher">查找</button>
+          <button bindtap="dialogSwitch">取消</button>
+        </view>
+      </view>
+    </view>
+
+    <view class="hold" bind:tap="insertVoucher">
+      <image class="item-icon" src="/img/add.png"/>
+      <view class="item">添加凭证</view>
+    </view>
+  </view>
+</view>

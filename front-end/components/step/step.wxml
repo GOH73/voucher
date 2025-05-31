@@ -1,0 +1,12 @@
+<!--components/Step/step.wxml-->
+<!-- https://www.cnblogs.com/tuofei13/p/15031636.html -->
+<view class="ct-wx-step">
+  <view class='ct-wx-cell-list' wx:key="{{item}}" wx:for="{{stepList}}">
+    <view class='ct-wx-cell-point  {{item.status==0?"default":"piont-last"}} '></view>
+    <view class='ct-wx-cell-line  {{item.status==1?"last":null}}'>
+      <view class='ct-wx-cell-name'>{{item.name}}</view>
+      <view class='ct-wx-cell-event'>{{item.event}}</view>
+      <view class='ct-wx-cell-time'>{{item.time}}</view>
+    </view>
+  </view>
+</view>
